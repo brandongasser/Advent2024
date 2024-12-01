@@ -7,6 +7,9 @@ export function product(nums: number[]): number {
 }
 
 export function transpose<T>(xss: T[][]): T[][] {
+    if (!xss.length) {
+        return [];
+    }
     const result: T[][] = [];
     for (let i = 0; i < xss[0].length; i++) {
         const row: T[] = [];
@@ -32,4 +35,14 @@ export function zipWith<A, B, C>(xs: A[], ys: B[], f: (a: A, b: B) => C): C[] {
         result.push(f(xs[i], ys[i]));
     }
     return result;
+}
+
+export function count<T>(xs: T[], predicate: (x: T) => boolean): number {
+    let n = 0;
+    for (const x of xs) {
+        if (predicate(x)) {
+            n++;
+        }
+    }
+    return n;
 }
