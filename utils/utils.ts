@@ -1,9 +1,9 @@
 export function sum(nums: number[]): number {
-    return nums.reduce((acc, x) => x + acc);
+    return nums.reduce((acc, x) => x + acc, 0);
 }
 
 export function product(nums: number[]): number {
-    return nums.reduce((acc, x) => x * acc);
+    return nums.reduce((acc, x) => x * acc, 1);
 }
 
 export function transpose<T>(xss: T[][]): T[][] {
