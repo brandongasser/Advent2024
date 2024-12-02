@@ -79,5 +79,5 @@ describe('Utils', () => {
 
             return result;
         });
-    })
+    });
 });
