@@ -46,3 +46,11 @@ export function count<T>(xs: T[], predicate: (x: T) => boolean): number {
     }
     return n;
 }
+
+export function fold<A, B>(xs: A[], f: (acc: B, elem: A) => B, initialValue: B) {
+    let acc = initialValue;
+    for (const x of xs) {
+        acc = f(acc, x);
+    }
+    return acc;
+}

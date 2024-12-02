@@ -69,5 +69,15 @@ describe('Utils', () => {
             const result = Utils.count([ 1, 8, 11, 3, 15, 16, 10 ], predicate);
             expect(result).toEqual(3);
         });
+    });
+
+    describe('fold', () => {
+        it('should reduce the list using the reduction function', () => {
+            const list = [{ a: 1 }, { a: 4 }, { a: 9 }];
+
+            const result = Utils.fold(list, (acc, x) => x.a + acc, 0);
+
+            return result;
+        });
     })
 });
