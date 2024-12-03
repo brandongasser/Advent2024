@@ -6,8 +6,8 @@ import { part2 } from './part-2';
 function main() {
     const input = readFileSync('inputs/day-19.txt').toString();
     try {
-		const startTime = Date.now();
-		const part1Input = parse(input, 1);
+        const startTime = Date.now();
+        const part1Input = parse(input, 1);
         const part1Answer = part1(part1Input);
         const endTime = Date.now();
         console.log(`Day 19 Part 1 Answer: ${part1Answer}`);
@@ -18,8 +18,8 @@ function main() {
         }
     }
     try {
-		const startTime = Date.now();
-		const part2Input = parse(input, 2);
+        const startTime = Date.now();
+        const part2Input = parse(input, 2);
         const part2Answer = part2(part2Input);
         const endTime = Date.now();
         console.log(`Day 19 Part 2 Answer: ${part2Answer}`);

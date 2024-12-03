@@ -18,8 +18,8 @@ function main() {
         }
     }
     try {
-		const startTime = Date.now();
-		const part2Input = parse(input, 2);
+        const startTime = Date.now();
+        const part2Input = parse(input, 2);
         const part2Answer = part2(part2Input);
         const endTime = Date.now();
         console.log(`Day 2 Part 2 Answer: ${part2Answer}`);
