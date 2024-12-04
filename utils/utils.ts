@@ -101,3 +101,12 @@ export function fold<A, B>(xs: A[], f: (acc: B, elem: A) => B, initialValue: B) 
     }
     return acc;
 }
+
+/**
+ * removes duplicates from a list
+ * @param xs list to remove duplicates from
+ * @returns new list with duplicates removed
+ */
+export function distinct<A>(xs: A[]): A[] {
+    return [...new Set(xs)];
+}

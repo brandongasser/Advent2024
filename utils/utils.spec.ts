@@ -77,7 +77,18 @@ describe('Utils', () => {
 
             const result = Utils.fold(list, (acc, x) => x.a + acc, 0);
 
-            return result;
+            expect(result).toEqual(14);
+        });
+    });
+
+    describe('distinct', () => {
+        it('should remove duplicate elements', () => {
+            const list = [1, 2, 3, 4, 3, 5];
+            const expected = [1, 2, 3, 4, 5];
+
+            const result = Utils.distinct(list);
+
+            expect(result).toEqual(expected);
         });
     });
 });
