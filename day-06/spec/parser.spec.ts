@@ -22,5 +22,25 @@ describe('Day 6 Parser', () => {
 
             expect(result).toEqual(expected);
         });
+
+        it('should parse input for part 2', () => {
+            const testInput = `.#..\n....\n#...\n..^#`;
+            const expected: { labMap: LabMap, guardState: GuardState } = {
+                labMap: [
+                    [ false, true, false, false ],
+                    [ false, false, false, false ],
+                    [ true, false, false, false ],
+                    [ false, false, false, true ]
+                ],
+                guardState: {
+                    orientation: 'up',
+                    position: [ 3, 2 ]
+                }
+            };
+
+            const result = Parser.parse(testInput, 2);
+
+            expect(result).toEqual(expected);
+        });
     });
 });
