@@ -12,10 +12,9 @@ export function isPossible(equation: { result: number, nums: number[] }): boolea
     const cases = Math.pow(2, equation.nums.length - 1);
 
     for (let i = 0; i < cases; i++) {
-        const flags = i.toString(2).padStart(equation.nums.length - 1, '0');
         let result = equation.nums[0];
         for (let j = 1; j < equation.nums.length; j++) {
-            if (flags[j - 1] === '0') {
+            if (i & Math.pow(2, j - 1)) {
                 result += equation.nums[j];
             } else {
                 result *= equation.nums[j];
