@@ -77,18 +77,18 @@ export class Parser<E> {
     }
 
     /**
-     * creates a new parser that runs this parser and then the other parser and returns the result of the other parser
+     * creates a new parser that runs this parser and then the other parser and returns the result of this parser
      * @param other other parser
-     * @returns new parser that runs both parsers and returns the value of the second
+     * @returns new parser that runs both parsers and returns the value of the first
      */
     followedBy<T>(other: Parser<T>): Parser<E> {
         return this.andThen(result => other.map(_ => result));
     }
 
     /**
-     * creates a new parser that runs this parser and then the other parser and returns the result of this parser
+     * creates a new parser that runs this parser and then the other parser and returns the result of the other parser
      * @param other other parser
-     * @returns new parser that runs both parsers and returns the value of the first
+     * @returns new parser that runs both parsers and returns the value of the second
      */
     preceding<T>(other: Parser<T>): Parser<T> {
         return this.andThen(_ => other);
