@@ -25,19 +25,19 @@ describe('Day 8 Part 1', () => {
     });
 
     describe('findAntinodes', () => {
-        it('should return an empty list for an empty list', () => {
+        it('should return an empty set for an empty list', () => {
             const result = Part1.findAntinodes([]);
 
             expect(result).toEqual(new Set())
         });
 
-        it('should return an empty list for a list of length 1', () => {
+        it('should return an empty set for a list of length 1', () => {
             const result = Part1.findAntinodes([ { frequency: '0', position: [ 1, 8 ] } ]);
 
             expect(result).toEqual(new Set());
         });
 
-        it('should return antinodes for a group', () => {
+        it('should return antinodes for a frequency', () => {
             const group: Antenna[] = [
                 { frequency: 'a', position: [ 3, 4 ] },
                 { frequency: 'a', position: [ 4, 8 ] },
