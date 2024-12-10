@@ -12,15 +12,10 @@ export function part2(input: number[][]): number {
     return answer;
 }
 
-export function rating(grid: number[][], position: [ number, number ]): number {
-    const memo: { [key: string]: number } = {};
-    
+export function rating(grid: number[][], position: [ number, number ]): number {    
     function subRating(pos: [ number, number ]): number {
         if (grid[pos[0]][pos[1]] === 9) {
             return 1;
-        }
-        if (memo[JSON.stringify(pos)] !== undefined) {
-            return memo[JSON.stringify(pos)];
         }
 
         let result = 0;
