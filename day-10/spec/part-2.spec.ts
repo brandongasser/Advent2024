@@ -20,4 +20,12 @@ describe('Day 10 Part 2', () => {
             expect(result).toEqual(81);
         });
     });
+
+    describe('rating', () => {
+        it('should return the rating of a trailhead', () => {
+            const result = Part2.rating(input, [ 0, 2 ]);
+            
+            expect(result).toEqual(20);
+        });
+    });
 });
