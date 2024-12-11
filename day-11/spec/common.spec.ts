@@ -20,4 +20,12 @@ describe('Day 11 Common', () => {
             expect(result).toEqual([512072]);
         });
     });
+
+    describe('blink', () => {
+        it('should return the number of rocks a rock creates after the specified number of blinks', () => {
+            const result = Common.blink(6, 125);
+
+            expect(result).toEqual(7);
+        });
+    });
 });

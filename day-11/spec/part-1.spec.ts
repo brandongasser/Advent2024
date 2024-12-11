@@ -10,15 +10,4 @@ describe('Day 11 Part 1', () => {
             expect(result).toEqual(55312);
         });
     });
-
-    describe('blink', () => {
-        it('should change the state of all rocks', () => {
-            const rocks = [ 253, 0, 2024, 14168 ];
-            const expected = [ 512072, 1, 20, 24, 28676032 ];
-
-            const result = Part1.blink(rocks);
-
-            expect(result).toEqual(expected);
-        });
-    });
 });
