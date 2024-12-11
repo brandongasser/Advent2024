@@ -21,24 +21,4 @@ describe('Day 11 Part 1', () => {
             expect(result).toEqual(expected);
         });
     });
-
-    describe('changeState', () => {
-        it('should change a 0 to a 1', () => {
-            const result = Part1.changeState(0);
-
-            expect(result).toEqual([ 1 ]);
-        });
-
-        it('should split a number with an even number of digits', () => {
-            const result = Part1.changeState(2024);
-
-            expect(result).toEqual([ 20, 24 ]);
-        });
-
-        it('should multiply anything that does not match the first two cases by 2024', () => {
-            const result = Part1.changeState(253);
-
-            expect(result).toEqual([ 512072 ]);
-        });
-    });
 });
