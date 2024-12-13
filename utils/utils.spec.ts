@@ -91,4 +91,12 @@ describe('Utils', () => {
             expect(result).toEqual(expected);
         });
     });
+
+    describe('gcd', () => {
+        it('should return the greatest common denominator for two numbers', () => {
+            const result = Utils.gcd(24, 18);
+
+            expect(result).toEqual(6);
+        });
+    });
 });

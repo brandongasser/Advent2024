@@ -110,3 +110,16 @@ export function fold<A, B>(xs: A[], f: (acc: B, elem: A) => B, initialValue: B) 
 export function distinct<A>(xs: A[]): A[] {
     return [...new Set(xs)];
 }
+
+/**
+ * returns the greatest common denominator of two numbers
+ * @param x first number
+ * @param y second number
+ * @returns greatest common demoninator between x and y
+ */
+export function gcd(x: number, y: number): number {
+    if (y === 0) {
+        return x;
+    }
+    return gcd(y, x % y);
+}
