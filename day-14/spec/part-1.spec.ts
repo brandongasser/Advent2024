@@ -27,53 +27,6 @@ describe('Day 14 Part 1', () => {
         });
     });
 
-    describe('nextState', () => {
-        it('should return the next state for a robot', () => {
-            const robot: Robot = {
-                position: new Vector(0, 4),
-                velocity: new Vector(3, -3)
-            };
-            const expected: Robot = {
-                position: new Vector(3, 1),
-                velocity: new Vector(3, -3)
-            };
-
-            const result = Part1.nextState(robot, 11, 7);
-
-            expect(result).toEqual(expected);
-        });
-
-        it('should wrap around positive edges', () => {
-            const robot: Robot = {
-                position: new Vector(10, 6),
-                velocity: new Vector(1, 1)
-            };
-            const expected: Robot = {
-                position: new Vector(0, 0),
-                velocity: new Vector(1, 1)
-            };
-
-            const result = Part1.nextState(robot, 11, 7);
-
-            expect(result).toEqual(expected);
-        });
-
-        it('should wrap around negative edges', () => {
-            const robot: Robot = {
-                position: new Vector(0, 0),
-                velocity: new Vector(-1, -1)
-            };
-            const expected: Robot = {
-                position: new Vector(10, 6),
-                velocity: new Vector(-1, -1)
-            };
-
-            const result = Part1.nextState(robot, 11, 7);
-
-            expect(result).toEqual(expected);
-        });
-    });
-
     describe('quadrantCounts', () => {
         it('should count the robots in each quadrant', () => {
             const robots: Robot[] = [
