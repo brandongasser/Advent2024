@@ -1,7 +1,7 @@
 import { Vector } from '../../utils/linear-algebra';
 import * as Common from '../common';
 
-fdescribe('Day 14 Parser', () => {
+describe('Day 14 Parser', () => {
     describe('nextState', () => {
         it('should return the next state for a robot', () => {
             const robot: Common.Robot = {
